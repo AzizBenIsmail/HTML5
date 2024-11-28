@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire avec tous les types d'input</title>
+</head>
+<body>
+    <h1>Formulaire Complet</h1>
+
+    <form action="/submit" method="POST">
+
+        <!-- Champ texte avec autocomplete et maxlength -->
+        <label for="nom">Nom :</label>
+        <input 
+            type="text" 
+            id="nom" 
+            name="nom" 
+            placeholder="Entrez votre nom" 
+            autocomplete="on" 
+            maxlength="50" 
+            title="saisire votre nom"
+            required>
+        <br><br>
+
+        <!-- Champ email avec minlength -->
+        <label for="email">Email :</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="exemple@domaine.com" 
+            minlength="5" 
+            pattern=".@militaire.tn"
+            required>
+        <br><br>
+
+        <!-- Champ mot de passe avec maxlength et minlength -->
+        <label for="password">Mot de passe :</label>
+        <input 
+            type="text" 
+            id="password" 
+            name="password" 
+            maxlength="20" 
+            minlength="8" 
+            pattern="[a-zA-Z0-9]{8}"
+            required>
+        <br><br>
+
+        <!-- Champ date avec min et max -->
+        <label for="date">Date de naissance :</label>
+        <input 
+            type="date" 
+            id="date" 
+            name="date" 
+            min="1900-01-01" 
+            max="2024-12-31" 
+            required>
+        <br><br>
+
+        <!-- Champ number avec min, max et step -->
+        <label for="age">Âge :</label>
+        <input 
+            type="number" 
+            id="age" 
+            name="age" 
+            min="1" 
+            max="100" 
+            step="1" 
+            required>
+        <br><br>
+
+        <!-- Champ color -->
+        <label for="color">Couleur préférée :</label>
+        <input 
+            type="color" 
+            id="color" 
+            name="color">
+        <br><br>
+
+        <!-- Champ radio avec checked -->
+        <p>Genre :</p>
+        <input 
+            type="radio" 
+            id="homme" 
+            name="genre" 
+            value="homme" 
+            checked>
+        <label for="homme">Homme</label>
+        <br>
+        <input 
+            type="radio" 
+            id="femme" 
+            name="genre" 
+            value="femme">
+        <label for="femme">Femme</label>
+        <br><br>
+
+        <!-- Checkbox avec checked -->
+        <label>
+            <input 
+                type="checkbox" 
+                name="abonnement" 
+                value="newsletter" 
+                checked>
+            S'abonner à la newsletter
+        </label>
+        <br><br>
+
+        <!-- Liste déroulante avec selected -->
+        <label for="pays">Pays :</label>
+        <select 
+            id="pays" 
+            name="pays" 
+            required>
+            <option value="tunisie" selected>Tunisie</option>
+            <option value="france">France</option>
+            <option value="maroc">Maroc</option>
+        </select>
+        <br><br>
+
+        <!-- Champ fichier avec accept -->
+        <label for="fichier">Téléchargez un fichier :</label>
+        <input 
+            type="file" 
+            id="fichier" 
+            name="fichier" 
+            accept=".jpg, .png, .pdf">
+        <br><br>
+
+        <!-- Champ range avec min, max et step -->
+        <label for="satisfaction">Satisfaction (0-10) :</label>
+        <input 
+            type="range" 
+            id="satisfaction" 
+            name="satisfaction" 
+            min="0" 
+            max="10" 
+            step="1">
+        <br><br>
+
+        <!-- Champ recherche avec autofocus -->
+        <label for="recherche">Recherche :</label>
+        <input 
+            type="search" 
+            id="recherche" 
+            name="recherche" 
+            placeholder="Recherche..." 
+            autofocus>
+        <br><br>
+
+        <!-- Champ téléphone -->
+        <label for="telephone">Téléphone :</label>
+        <input 
+            type="tel" 
+            id="telephone" 
+            name="telephone" 
+            placeholder="+216 12345678" 
+            required>
+        <br><br>
+
+        <!-- Champ URL -->
+        <label for="site">Site Web :</label>
+        <input 
+            type="url" 
+            id="site" 
+            name="site" 
+            placeholder="https://exemple.com">
+        <br><br>
+
+        <!-- Champ readonly -->
+        <label for="statique">Champ en lecture seule :</label>
+        <input 
+            type="text" 
+            id="statique" 
+            value="Lecture seule" 
+            readonly>
+        <br><br>
+
+        <!-- Champ disabled -->
+        <label for="non_modifiable">Champ désactivé :</label>
+        <input 
+            type="text" 
+            id="non_modifiable" 
+            value="Non modifiable" 
+            disabled>
+        <br><br>
+
+        <!-- Boutons -->
+        <button type="submit">Soumettre</button>
+        <button type="reset">Réinitialiser</button>
+    </form>
+
+</body>
+</html>
