@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Avancé</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        caption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        tfoot {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Rapport des Ventes Mensuelles - 2024</caption>
+        <colgroup>
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Région</th>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Revenu (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Nord</td>
+                <td>Ordinateurs</td>
+                <td>150</td>
+                <td>75,000</td>
+            </tr>
+            <tr class="highlight">
+                <td>Smartphones</td>
+                <td>300</td>
+                <td>90,000</td>
+            </tr>
+            <tr>
+                <td>Tablettes</td>
+                <td>200</td>
+                <td>50,000</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Sud</td>
+                <td>Ordinateurs</td>
+                <td>100</td>
+                <td>50,000</td>
+            </tr>
+            <tr>
+                <td>Smartphones</td>
+                <td>250</td>
+                <td>75,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>1000</td>
+                <td>340,000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
